@@ -1,0 +1,1596 @@
+/*****************************************************
+ STARWEB CORE CSS v1.0
+*****************************************************/
+
+
+
+
+
+
+/******************** RESET  ********************/
+* { margin:0; padding:0; vertical-align:baseline; }
+body { line-height:1.5; font-size:100%; }
+caption, th, td { text-align:left; font-weight:normal; }
+table, td, th { vertical-align:middle; }
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+blockquote, q { quotes:"" ""; }
+a img { border:none; }
+
+
+
+
+
+
+/******************** CORE  ********************/
+body { color:#222; font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; color:#111; font-family:"Trebuchet MS"; }
+h1 { font-size:20px; font-weight:bold; line-height:1.2em; margin-bottom:0.5em; letter-spacing:-1px; }
+h2 { font-size:20px; margin-bottom:0.8em; }
+h3 { font-size:1.5em; line-height:1; margin-bottom:1em; }
+h4 { font-size:1.2em; line-height:1.25; margin-bottom:1.25em; }
+h5 { font-size:1em; font-weight:bold; margin-bottom:1.5em; }
+h6 { font-size:1em; font-weight:bold; }
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin:0; }
+p { margin:0 0 1.2em; }
+p img.left { float:left; margin:1.5em 1.5em 1.5em 0; padding:0; }
+p img.right { float:right; margin:1.5em 0 1.5em 1.5em; }
+a:focus, a:hover { color:#c00; }
+a { color:#000; text-decoration:underline; }
+blockquote { margin:1.5em; color:#666; font-style:italic; }
+strong { font-weight:bold; }
+em, dfn { font-style:italic; }
+dfn { font-weight:bold; }
+sup, sub { line-height:0; }
+abbr, acronym { border-bottom:1px dotted #666; }
+address { margin:0 0 1.5em; font-style:italic; }
+del { color:#666; }
+pre { margin:1.5em 0; white-space:pre; }
+pre, code, tt { font:1em 'andale mono', 'lucida console', monospace; line-height:1.5; }
+li ul, li ol { margin:0 1.5em; }
+li { margin:0px 0px 0.1em 12px; padding:0px 0px 0.1em; }
+ul, ol { margin:0; padding:0px 0px 0px 15px; left:0; /*margin:0 1.5em 1.5em 1.5em;*/ }
+ul { list-style-type:disc; }
+ol { list-style-type:decimal; }
+dl { margin:0 0 1.5em 0; }
+dl dt { font-weight:bold; }
+dd { margin-left:1.5em; }
+table { margin-bottom:1.4em; width:100%; }
+th { font-weight:bold; }
+thead th { background:#c3d9ff; }
+th, td, caption { padding:4px 10px 4px 5px; }
+table, th, td { margin:0; }
+tr.even td { background:#e5ecf9; }
+tfoot { font-style:italic; }
+caption { background:#eee; }
+hr { border:0; width:99%; clear:both; float:none; height:1px; margin:0.45em; }
+img { border:0; }
+form { padding:0; margin:0; }
+label { font-weight:bold; }
+textarea { resize:none; }
+.small { font-size:.8em; margin-bottom:1.875em; line-height:1.875em; }
+.large { font-size:1.2em; line-height:2.5em; margin-bottom:1.25em; }
+.hide { display:none; }
+.quiet { color:#666; }
+.loud { color:#000; }
+.highlight { background:#ff0; }
+.added { background:#060; color:#fff; }
+.removed { background:#900; color:#fff; }
+.first { margin-left:0; padding-left:0; }
+.last { margin-right:0; padding-right:0; }
+.top { margin-top:0; padding-top:0; }
+.bottom { margin-bottom:0; padding-bottom:0; }
+.cssPointerHand { cursor:pointer; }
+.block { display:block; }
+.cssFloatLeft { float:left; width:50%; }
+.cssFloatRight { float:right; width:50%; }
+.cssSpace { clear:both; display:block; height:10px; font-size:1px; }
+.cssFontNormal { font-weight:normal; }
+.cssNoBorder { border:0; border-collapse:collapse; }
+.cssHr { background:#eee; color:#eee; clear:both; }
+.cssVr { float:left; background:#eee; color:#eee; width:1px; height:250px; margin:0.45em; }
+.cssImgBorder { margin-bottom:2px; filter:alpha(opacity=100); -moz-opacity:1.0; -khtml-opacity:1.0; opacity:1.0; }
+.cssImgBorder:hover { margin-bottom:2px; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity:0.8; opacity:0.8; }
+.cssTblColDateDefault { color:#555; font-size:11px; }
+.cssTblColDateAnnul { color:#f14f4f; font-size:11px; }
+.cssTblColDateTitle { font-size:12px; }
+.cssWarnMsg, .cssTipMsg, .cssOkMsg { padding:.8em; margin:0 0 1em 0; border:2px solid #ddd; max-width:500px; font-size:12px; list-style-type:none; clear:both; }
+.cssWarnMsg p, .cssTipMsg p, .cssOkMsg p { margin:0; }
+.cssWarnMsg ul, .cssTipMsg ul, .cssOkMsg ul { margin:0; padding:0; list-style-type:none; }
+.cssWarnMsg li, .cssTipMsg li, .cssOkMsg li { margin:0; padding:0;  }
+.cssWarnMsg { background:#FBE3E4; color:#8a1f11; border-color:#FBC2C4; }
+.cssTipMsg { background:#FFF6BF; color:#514721; border-color:#FFD324; }
+.cssOkMsg { background:#e6efc2; color:#264409; border-color:#C6D880; }
+.cssWarnMsg a { color:#8a1f11; }
+.cssTipMsg a { color:#514721; }
+.cssOkMsg a { color:#264409; }
+.cssDialogMsg { margin-top:130px; text-align:left; }
+.cssDialogMsg li { list-style:decimal; margin:4px; }
+.cssExtraMargin { margin:15px 0; }
+.cssVat { clear:both; font-size:12px; white-space:nowrap; }
+.cssCopyrightPricesAreShownByVat { float:left; margin-bottom:20px; margin-top:30px; text-align:center; width:100%; }
+.cssCheckOutCostOfGoodsRowCustEu { clear:both; margin-top:3px; }
+.cssMiniHeadline { font-size:12px; font-weight:bold; margin:20px 0; text-align:center; }
+#cssPageLogo { top:0; }
+.cssPageLogo { margin:0; }
+#cssImgPopup { text-align:center; }
+.cssPageAc_CustEditShutOutVisitorItem, .cssAc_CustOnlyLoginWnd { background:#fff; padding:10px; min-height:600px; }
+.cssClearFix { clear:both; }
+.cssInlineBlock { display:-moz-inline-stack; display: inline-block; zoom:1; *display:inline; } /* inline-block with FF2, IE6 & IE7 compability */
+.clearfix {
+   *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+   display: table;
+   line-height: 0;
+   content: "";
+}
+.clearfix:after {
+   clear: both;
+}
+
+
+/******************** ARTICLE  ********************/
+.cssArtOfferArtList { overflow:hidden; }
+.cssArtGalleryList { overflow:hidden; float:left; width:100%; margin-top:10px; }
+.cssArtGalleryDescrShort { font-size:10px; }
+.cssArtRowList { width:100%; float:left; }
+#cssHdrSortOrderBottom { padding:0 0 0 -5px; }
+#cssHdrSortOrderBottom hr { margin-left:-1px; }
+#cssSortOrderName { float:left; }
+#cssSortOrderName a { }
+#cssSortOrderName .cssArtSortTxtBold { font-weight:bold; }
+#cssSortOrderName .cssArtSortTxtBold, #cssSortOrderName .cssSortTxtLight { padding:0px 5px; }
+#cssSortOrderType { float:right; padding-bottom:2px; }
+#cssSortOrderType img { vertical-align:middle; margin-left:2px; }
+hr.cssHrSortOrderTop, hr.cssHrSortOrderBottom { width:100%; }
+#cssSortHdr { margin:20px 0; background:#eee; background:#F7F7F7 none repeat scroll 0 0; background:#eee; padding:5px; -moz-border-radius:5px; border:1px solid #CCCCCC; }
+.cssTabMenuGalleryAndList { float:left; background:#eee; padding:0 21px; margin-left:-20px; margin-top:15px; width:546px; postion:relative; }
+.cssTabMenuGalleryAndList div.cssUnmarked, .cssTabMenuGalleryAndList div.cssMarked { margin:5px 5px 0 0; background:#444; border:1px solid #666; float:left; -moz-border-radius-topleft:4px; -moz-border-radius-topright:4px;-webkit-border-top-left-radius:4px; -webkit-border-top-right-radius:4px;  border-bottom:none; }
+.cssTabMenuGalleryAndList div.cssMarked { border:1px solid #aaa; border-bottom:none; background:#fff; }
+.cssTabMenuGalleryAndList div.cssUnmarked:hover, .cssTabMenuGalleryAndList div.cssMarked:hover { background-image:none; }
+.cssTabMenuGalleryAndList div.cssMarked:hover { background:#fff; }
+.cssTabMenuGalleryAndList div.cssUnmarked a, .cssTabMenuGalleryAndList div.cssMarked a { padding:4px 1.2em 3px; font-size:14px; color:#fff; width:100%; text-decoration:none; display:block; outline:none; }
+.cssTabMenuGalleryAndList div.cssMarked a { color:#444; }
+.cssSortHdr { float:right; position:absolute; right:0; width:400px; }
+.cssSortHdr select { font-size:10px; width:180px; border:1px solid #ccc; padding:2px; }
+.cssArtList_DivRowList, .cssArtList_DivGalleryList { float:left; margin-top:10px; width:100%; }
+select.cssSortOrderName { position:absolute; right:120px; top:7px; }
+select.cssSortOrderType { position:absolute; right:20px; top:7px; width:90px; text-transform:capitalize; }
+.cssTabMenuGalleryAndListHr { position:absolute; width:100%; height:0px; background:#ccc; }
+.cssArtListBtn input.cssBtnBuy,
+.cssArtListBtn input.cssBtnDefault,
+.cssArtGalleryBtn input.cssBtnBuy,
+.cssArtGalleryBtn input.cssBtnDefault,
+.cssArtItemBtnBuy input.cssBtnBuyBig { margin-bottom:2px; }
+.cssSearchUrlPageList { float:left; margin:20px 0; text-align:center; width:100%; }
+.cssUrlArtSmall, .cssUrlArt { text-decoration:none; }
+.cssArtListArtTitel { text-decoration:underline; }
+.cssArtListArtNameIcon { vertical-align:text-bottom; margin-right:2px; }
+.cssArtListBtn, .cssArtGalleryBtn { text-align:right; }
+
+
+
+
+/* Article Item */
+.cssArtCostExclVatNr { font-weight:bold; font-size:small; }
+.cssArtListDataCellCost .cssArtCostExclVatNr{ margin-right:10px; }
+.cssArtCostExclVatNr, .cssArtCostDiscountExclVatNr { float:left; }
+.cssArtCostDiscountExclVatNr { float:left; width:100%; text-decoration:line-through; font-size:small; }
+.cssArtItemCost .cssArtCostDiscountExclVatNr.cssArtItemCostDiscountExclVatNr { float: none; }
+.cssArtListModelIdTxt { clear:left; }
+.cssArtListModelIdTxt, .cssArtListModelId, .cssArtListStockStatusTxt, .cssArtListStockStatus { font-size:x-small; }
+.cssArtListDescrShort, .cssArtGalleryDescr { font-size:x-small; margin-bottom:8px; }
+.cssArtGalleryDescr { float:left; width:100%; white-space:normal;overflow:hidden; }
+.cssArtListCostTxt { display:none; }
+.cssArtList { margin:6px 0; border-bottom:1px solid #fff; padding-bottom:1em; width:100%; }
+.cssArtListImg { height:auto; width:150px; float:left; margin-right:10px; text-align:center; }
+.cssArtListImg img { margin-top:2px; }
+.cssArtListDescr { height:auto; float:left; max-width:280px; text-align:left; word-wrap:break-word; }
+.cssArtListDescr .cssUrlArt { float:top left; font-weight:bold; font-size:13px; outline:none; word-wrap:break-word; }
+.cssArtGalleryDescr .cssUrlArtSmall { outline:none; word-wrap:break-word; }
+.cssArtListBtn { float:right; margin-top:15px; margin-right:10px; }
+.cssArtListDataCellCost { clear:right; float:left; width:100%; }
+.cssArtListDataCellModelId, .cssArtListDataCellStockStatus { float:left; }
+.cssArtListDataCellModelId { padding-right:8px; }
+.cssUrlArtSmall { font-weight:bold; font-size:12px; display:block; }
+.cssArtGalleryCell { margin:8px; float:left; /*max-width:160px;*/ /*height:220px;*/ }
+.cssArtGalleryArtOfferCell { margin:2px; float:left; }
+.cssArtGalleryImg { min-height: 150px; width:auto; position:relative; }
+.cssArtGalleryArtPerPageImg { position:relative; }
+.cssArtGalleryImgInner { bottom: 5px; text-align: center; }
+.cssArtGalleryDescr { height:65px; text-align:center; }
+.cssArtGalleryDescr a { font-weight:bold; }
+.cssArtGalleryArtPerPageCell { margin:0 auto; padding-bottom:45px; }
+.cssArtGalleryArtPerPageCell .cssArtGalleryDescr { height:44px; }
+.cssArtGalleryBtn { float:right; }
+.cssArtGalleryData { display:block; float:left; }
+.cssArtItemHdr a { color:#444; text-decoration:none; border-bottom:1px dotted #ccc; }
+.cssArtItemHdrBtnRowList { text-align:right; float:right; width:250px; margin-top:-3px; }
+.cssArtItemHdrBtn { float:right; margin-left:10px; }
+.cssArtItemArtMenuRow { margin-right:250px; }
+.cssArtItemArtMenuRow, .cssArtItemArtMenuRow a { font-size:12px; }
+.cssArtItemImg { overflow:auto; }
+#cssArtItemImg_1 { margin:0 auto; width:75%; overflow:auto; text-align:center; float:left; position:relative; text-align:left; }
+#cssArtItemImg_1 img { margin:0 auto; }
+#cssArtItemImg_1 .cssImgTransparent { z-index:2; position:absolute; left:40px; }
+#cssArtItemImg_1 { *width:70%; }
+.cssArtItemImgThumbGallery { float:right; width:25%; text-align:center; }
+.cssArtItemImgThumbGallery a img { border:0; clear:both; margin:5px 0; }
+.cssArtItemImgThumb { margin-bottom:10px; }
+#cssArtItem .cssImg { margin-left:40px; }
+#cssArtItem { overflow:auto; }
+#cssArtItem .cssFrmFldSelectBoxSmall { font-size:14px; }
+.cssMovieIcon { display:none; }
+.cssArtItemData { border:0; /*margin-bottom:30px;*/ }
+.cssArtItemDataRow_1 { overflow:auto; float:left; width:70%; }
+.cssArtItemDataRow_2 { float:right; width:28%; }
+.cssArtItemDataRow_2Inner { float:right; min-width:175px; margin-top:12px; /*margin-top:25px;*/ }
+.cssArtItemDataRow_2Inner label { font-size:12px; }
+.cssArtItemDataBtnRowList { float:left; margin-bottom:20px; }
+.cssArtItemDataBtnRowItem { float:left; }
+.cssArtItemBtnPrint { }
+.cssArtItemBtnAc_ShareAddThis, .cssArtItemBtnTellFriend, .cssArtItemBtnToArtInArtList { margin-left:20px; }
+.cssArtItemBtnToArtInArtList { display:none; }
+.cssArtItemArtPrm { margin-top:2px; }
+.cssArtItemArtPrmInner { clear:both; }
+.cssArtItemArtPrmInner ul { list-style-type:none; padding:0; }
+.cssArtItemArtPrmInner label { margin-top:2px; display:inline; font-weight:bold; }
+.cssArtItemArtPrmInner ul li label { padding-left:5px; }
+.cssArtItemArtPrmInner select { clear:both; display:block; width:150px; }
+.cssArtItemArtPrmInner p { font-weight:bold; margin:5px 5px 5px 0; padding:0px; }
+.cssArtItemCustomFldEditableItemCon { margin-top:12px; }
+.cssArtItemDataAddToCart { overflow:hidden; margin:20px 0 20px 0; }
+.cssArtItemDataRow_1 .cssPadding_1 { margin:10px 26px 30px; /*padding:40px;*/ }
+.cssFrmFldArtQtyNr { text-align:center; }
+.cssArtItemHeadline { font-weight:bold; margin:0 0 0.75em; }
+.cssArtItemDescrShort { font-size:16px; }
+.cssArtItemDescrLong { clear:left; margin-bottom:20px; }
+#cssImg_1 { margin-left:40px; margin-top:5px; }
+.cssArtItemArtQtyNr, .cssArtItemBtnBuy, .cssArtItemBtnTellFriend, .cssArtItemBtnToArtInArtList, .cssArtItemBtnPrint { float:left; }
+.cssArtItemBtnBuy { padding:2px; margin-left:5px; margin-top:-2px; }
+.cssArtItemAc_ArtRelation, .cssArtItemBoughtByOtherCust, .cssArtItemAc_Affl { clear:both; margin:40px; }
+.cssArtItemAc_Affl { overflow:hidden; }
+#cssAc_AfflVertList { margin-bottom:15px; overflow:hidden; }
+#cssArtItemBoughtByOtherCustTxt { font-size:13px; font-weight:bold; }
+#cssArtItemBoughtByOtherCustArtList, #cssArtItemBoughtByOtherCustArtList a, #cssArtItemAc_ArtRelationArtList, #cssArtItemAc_ArtRelationArtList a { font-size:11px; padding:3px; }
+.cssArtItemCostExclVatNr { font-size:22px; }
+.cssArtItemCostExclVatNr, .cssArtItemCostDiscountExclVatNr { color:#c00; border-width:0; font-weight:bold; width:168px; white-space:nowrap; }
+.cssArtItemCostDiscountExclVatNr { color:#000; text-decoration:line-through; }
+input.cssArtModelId, input.cssArtStockStatus, input.cssArtWeightNr, .cssUrlArtItemSupplierHomepage, .cssArtItemCustomFldItemData { background-color:transparent; border-width:0; font-weight:normal; font-size:13px; }
+#cssArtItemAc_ArtRelationTxt { font-size:13px; font-weight:bold; }
+.cssArtPopular, .cssArtLastAdded { float:left; width:45%; padding:4px; text-align:center; }
+.cssArtPopular a, .cssArtLastAdded a { font-size:12px; font-weight:bold; }
+#cssArtPopularMarked, #cssArtLastAddedMarked { }
+#cssArtPopularMarked .cssMarked a, #cssArtLastAddedMarked .cssMarked a { color:#777; text-decoration:none; }
+.cssTabMenuArtRow { font-size:10px; line-height:12px; padding:3px; }
+.cssTabMenuArtRow.cssOdd { background-color:#efefef; }
+.cssTabMenuArtRow a { font-size:10px; }
+.cssUrlFrameVat { font-size:12px; }
+#cssArtItemKlarnaPartPayCon { margin:2em 0 1em 0; font-size:11px; }
+#cssArtItemKlarnaPartPayCon img { display:block; }
+
+#cssLikeButtonsCon { width:470px; position:relative; margin-top:10px; clear:both; height:30px;  }
+.cssLikeButtonCon { float:left; }
+#cssGooglePlusOneCon { width:80px; }
+#cssPinBtn { float: left; width: 55px; }
+#cssFbLikeBtn { float: left; width: 100px; }
+#cssFacebookLikeCon {  }
+.cssArtItemCommentMenu { clear:both; float:left; margin-bottom:10px; width:100%; }
+.cssArtItemCommentAvgRating { float:right; padding:0 0 5px; }
+.cssArtItemCommentAvgRatingTxt { float:left; font-size:0.9em; font-weight:bold; padding-top:2px; margin-right:5px; }
+.cssArtItemCommentLeaveCommentMsgBox { display:none; left:14px; position:absolute; z-index:3; }
+.cssArtItemCommentLeaveComment { margin-bottom:25px; float:left; }
+.cssArtItemCommentLeaveComment h2 { font-size:15px; font-weight:bold; margin:0 0 4px 0; }
+.cssArtItemCommentLeaveComment label { display:block; margin:10px 0px 5px 0px; clear:both; font-size:0.9em; }
+#cssArtItemCommentBtn { display:block;clear:right; margin:0; float:right; }
+.cssArtItemCommentOddRow { background-color:#eeeeee; }
+.cssArtItemUserCommentContainer, .cssCommentLeaveCommentTxtContainer { display:block; clear:both; float:left; width:440px; border:1px solid #e2dddd; background-color:#eeeeee; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.cssArtItemUserCommentContainer {margin-top:5px;}
+.cssCommentLeaveCommentTxtContainer {margin-bottom:5px;}
+.cssArtItemCommentHdrContainer { float:left; width:440px; margin:0 0 5px 0; border-bottom:1px solid #ddd; padding-bottom:3px; }
+.cssArtItemCommentHdr { display:block; float:left; }
+.cssArtItemCommentHdr h3 { font-size:15px; margin:7px 0 0 0; font-weight:bold; }
+.cssArtItemCommentItemHdr { display:block; float:left; }
+.cssArtItemCommentTxtContainer { display:block; padding:5px; float:left; width:350px; }
+.cssArtItemCommentItemImg { float:left; margin:5px; display:block; }
+.cssArtItemCommentItemImg img { border:2px solid #fff; }
+.cssArtItemCommentAuthor, .cssArtItemCommentDate { display:block; float:left; font-size:1em; width:135px; }
+.cssArtItemCommentTxtContainer .cssArtItemCommentDate { width:80px; margin-top:3px; }
+.cssArtItemCommentTxtContainer .cssArtItemCommentAuthor { width:195px; }
+.cssArtItemCommentDate { font-weight:normal; text-align:right; }
+.cssArtItemCommentAuthorName { font-weight:bold;  }
+.cssArtItemCommentText { clear:both; display:block; padding:5px 0; }
+.cssArtItemCommentText h3 { font-size:12px; font-weight:bold; margin:5px 15px; font-style:italic; }
+.cssArtItemCommentRating { display:block; clear:both; margin:10px 5px; }
+.cssArtItemCommentRatingText { display:inline; font-size:0.8em; }
+.cssArtItemCommentRatingIconContainer { display:block; float:left; min-width:85px; }
+.cssArtItemCommentRatingIcon { margin-top:2px; width:17px; height:15px; text-indent:-999em; display:block; overflow:hidden; float:left; }
+.cssArtItemCommentRatingFilled { background:url("../Image/Setting/star.gif") no-repeat 0 -32px; }
+.cssArtItemCommentRatingEmpty { background:url("../Image/Setting/star.gif") no-repeat 0 0; }
+#cssArtItemCommentTxt { border:1px solid #999999; -moz-border-radius:5px; -webkit-border-radius:5px; margin:auto; margin:3px; height:95px; }
+.cssArtItemCommentList { margin-bottom:5px; float:left; }
+.cssFacebookLogin, .cssShopLogin, .cssGuestLogin, .cssGravatarLogin { font-weight:bold; font-size:0.8em; margin:0 0 3px 0; }
+.cssShopLogin { color:#222222; }
+.cssGuestLogin { color:#222222; }
+.cssGravatarLogin { color:#222222; }
+.cssFacebookLogin { color:#637bad; }
+.cssCommentLeaveCommentAuthor { float:left; padding:4px; text-align:center; font-size:0.8em; width:100px; }
+p.cssCommentAuthor { font-weight:bold; margin:2px auto; }
+.cssCommentLeaveCommentAuthor img { margin:0 auto 5px; display:block; }
+
+.cssArtItemCommentLeaveCommentLoginMsg { display:block; width:400px; }
+
+.cssSocialLoginBtnContainer { margin-top:16px; }
+.cssSocialLoginBtn { background-color:#444444; color:#eeeeee; -webkit-border-radius:5px; -moz-border-radius:5px; height:27px; border:2px solid #c7c7c7; cursor:pointer; }
+.cssSocialLoginBtn:hover { background-color:#555555; color:#ffffff; }
+.cssSocialLoginBtn a { color:#eeeeee; text-decoration:none; font-weight:bold; display:block; padding-top:5px; font-size:1.1em; display:block; }
+.cssSocialLoginBtn a:hover, .cssSocialLoginBtn a:active, .cssSocialLoginBtn a:focus { color:#ffffff; }
+.cssLoginTypeDiv { display:none; }
+.cssLoginTypeUl { list-style-type:none; -webkit-border-radius:5px; -moz-border-radius:5px; border:2px solid #c7c7c7; background-color:#555555; color:#ffffff; padding:2px; }
+.cssLoginTypeLi { margin:0; padding:2px; font-size:0.7em; font-weight:bold; background-color:#555555; color:#ffffff; }
+.cssLoginTypeLi:hover { background-color:#828282; }
+.cssLoginTypeLi a, .cssLoginTypeLi a:hover, .cssLoginTypeLi a:active, .cssLoginTypeLi a:focus { color:#ffffff; text-decoration:none; width:100%; display:block; }
+
+.cssLoginPopup { width:235px; }
+#cssGravatarLoginContainer, #cssShopLoginContainer, #cssFbSessContainer { border:3px solid #e2dddd; background-color:#eeeeee; -moz-border-radius:5px; -webkit-border-radius:5px; color:#222222; z-index:500; -moz-box-shadow:3px 3px 6px #999; -webkit-box-shadow:3px 3px 6px #999; }
+#cssFbSessContainer p { font-size:0.8em; text-align:center; }
+#cssFbSessContainer .cssLinkContainer { text-align:center; }
+#cssFbSessContainer a.cssFbStayLoggedIn { cursor:pointer; margin:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-size:0.8em; font-weight:bold; text-decoration:none; color:#fff; background:#444444; }
+#cssFbSessContainer a.cssFbStayLoggedIn:hover { background:#666666; }
+#cssFbSessContainer a.cssFbStayLoggedIn span { padding:10px; }
+#cssGravatarLogin, #cssShopLogin, #cssFbLogin { padding:10px; float:left; }
+#cssCloseGravatarLogin, #cssCloseShopLogin { text-decoration:none; cursor:pointer; background:url("../Image/Setting/closeBtnBg.png") no-repeat scroll left top #ff0000; color:#fff; margin:2px; font-weight:bold; height:17px; width:17px; border:1px solid #a70000; -moz-border-radius:5px; -webkit-border-radius:5px; position:relative; top:-5px; right:-5px; float:right; display:block; }
+#cssCloseGravatarLogin:hover, #cssCloseShopLogin:hover { background:url("../Image/Setting/closeBtnBg.png") no-repeat scroll left -17px #ff0000; }
+#cssGravatarLogin label, #cssShopLogin label { display:block; font-size:0.8em; }
+#cssGravatarLogin input[type='text'], #cssShopLogin input[type='text'], #cssShopLogin input[type='password'] { width:250px; display:block; border:3px solid #dddddd; padding:2px; margin:2px; width:200px; }
+#cssGravatarLogin input[type='image'], #cssShopLogin input[type='image'] { margin:2px; float:right; }
+.cssLoginFail { font-size:0.8em; font-weight:bold; width:200px; clear:both; color:red; }
+
+input[type="button"].cssObfuscate, input[type="submit"].cssObfuscate { background-color:#F0F0F0; }
+textarea.cssObfuscate, input[type="text"].cssObfuscate { border-color:#F0F0F0; color:#F0F0F0; }
+label.cssObfuscate { color:#F0F0F0; }
+#cssArtItemCommentBtn.cssBtnDisabled, #cssArtItemCommentBtn.cssBtnDisabled:hover { background:#dddddd; cursor:default; }
+
+.cssArtItemBloggAboutThisContainer { margin-top:15px; margin-bottom:5px; width:186px; }
+.cssArtItemBloggAboutThisLinkContainer { margin-bottom:10px; }
+.cssArtItemBloggAboutThisUrlContainer { display:none; }
+.cssArtItemBloggAboutThisUrlContainer p { font-size:0.8em; margin:5px 0px 2px 0px }
+a.cssArtItemBloggAboutThisLink { font-size:11px; font-weight:bold; text-decoration:none; }
+#cssArtItemBloggAboutThisUrl { border:3px double #cecece; width:180px; }
+#cssArtItemBloggAboutThisUrl samp { display:block; word-wrap:break-word; font-size:0.8em; padding:3px; }
+.cssArtItemElibTeaserCon { margin-bottom:10px; }
+.cssArtItemElibTeaserLink { font-size:14px; text-decoration:none; font-weight:bold; }
+.cssArtItemElibTeaserTxt { margin-left:0.2em; vertical-align:70%; }
+
+.cssBreadcrumb {
+   margin: 0 0 15px;
+   padding: 0;
+}
+
+.cssBreadcrumb:before {
+   content: "\00BB";
+   font-size: 14px;
+   color: #999;
+}
+
+.cssBreadcrumb li {
+   display:-moz-inline-stack;
+   display: inline-block;
+   zoom:1;
+   *display:inline;
+   margin: 0;
+   padding: 0;
+   font-size: 12px;
+}
+
+.cssBreadcrumb a {
+   text-decoration: none;
+   border-bottom:1px dotted #ccc;
+}
+
+.cssBreadcrumbDivider {
+   color: #999;
+   padding: 0 2px;
+}
+
+.cssBreadcrumbActive, .cssBreadcrumbActive a {
+   font-weight: bold;
+}
+
+/* Product fields */
+.cssArtItemFldCon {
+   width: 200px;
+   font-size: 12px;
+   margin-bottom: 10px;
+   overflow: hidden;
+}
+
+.cssArtItemFldName {
+   font-weight: bold;
+   white-space: nowrap;
+}
+
+.cssArtItemFldVal {
+   word-wrap: break-word;
+}
+
+#cssArtItemManufacturerNameSearchCon {
+   margin-top: 30px;
+}
+
+#cssArtItemManufacturerNameSearchLink {
+   font-size: 11px;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+#cssArtItemManufacturerNameSearchLink:hover {
+   color: #000;
+}
+
+.tw_logo { font-size:0.7em; display:block; }
+.tw_link { text-decoration:none; }
+.tw_header { font-size:0.9em; font-weight:bold; margin-bottom:5px; display:none; }
+.tw_lw_c { font-size:0.8em; }
+.tw_lw_c div { font-size:0.8em; display:block; }
+.tw_lw_c a { font-size:1em; display:block; }
+
+/* Highslide */
+.highslide img { border:0; }
+.highslide-thumbstrip-horizontal img {
+   width: auto !important;
+   height: 40px !important;
+}
+.no-move-close .highslide-header .highslide-move { display:none; }
+.no-move-close .highslide-header .highslide-close { display:none; }
+
+/* Flash movie */
+.cssDivTransparent_Shop998 { margin:0 auto; }
+.cssDivTransparent_Shop999 { vertical-align:baseline; }
+.cssArtGalleryImgInner .cssDivTransparent_Shop999 { width:100%; height:100%; }
+.cssArtListImg .cssDivTransparent_Shop999 { max-width:150px; max-height:110px; height:100%; width:100%; display:block; position:absolute; }
+.cssArtGalleryImgInner .cssDivTransparent_Shop999 a, .cssArtListImg .cssDivTransparent_Shop999 a { width:100%; height:100%; display:block; }
+
+
+
+/* Product category tree */
+#cssProdCatTree {
+   list-style: none;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   line-height: 1;
+}
+
+.cssProdCatTreeSubTree {
+   list-style: none;
+   margin: 0 0 0 6px;
+   padding: 0;
+}
+
+.cssProdCatTreeNode {
+   margin: 0;
+   padding: 0;
+   white-space: nowrap;
+}
+
+.cssProdCatTreeNodeIconOpen, .cssProdCatTreeNodeIconClosed {
+   cursor: pointer;
+}
+
+.cssProdCatTreeNodeIcon {
+   display: -moz-inline-stack;
+   display: inline-block;
+   zoom: 1;
+   *display: inline;
+   width: 18px;
+   height: 1em;
+   background-repeat: no-repeat;
+   background-position: center center;
+   vertical-align: middle;
+}
+
+.cssProdCatTreeLink {
+   display: -moz-inline-stack;
+   display: inline-block;
+   zoom: 1;
+   *display: inline;
+   width: 100%;
+   padding: 2px 22px 2px 0; /* (18px node icon + 4px whitespace = 22px) */;
+   min-height: 22px;
+   vertical-align: middle;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+
+   background: transparent;
+   white-space: normal;
+   word-wrap: break-word;
+
+   line-height: 1.5;
+   font-size: 11px;
+   font-weight: bold;
+   text-transform: none;
+   text-decoration: none;
+}
+
+.lt-ie8 .cssProdCatTreeLink { /* ie lower than 8 doesn't support box-sizing, fallback to hide overflow */
+   zoom: normal;
+   white-space: nowrap;
+   word-wrap: normal;
+   width: auto;
+   padding: 0;
+   line-height: 24px;
+}
+
+.cssProdCatTreeSubTree .cssProdCatTreeLink {
+   font-weight: normal;
+}
+
+.cssProdCatTreeLeafNode > .cssProdCatExpandOnlyLink { /* there's no action on a non clickable leaf node */
+   cursor: default;
+}
+
+
+/******************** CART ********************/
+.cssCartSelBox { width:150px; }
+#cssCartCostTitle { font-size:13px; }
+.cssFrameTxtCost { font-size:13px; font-weight:bold; }
+.cssCartArtTxtNr, .cssCartArtTotalQtyNr { font-weight:bold; }
+.cssCartArtTotalQtyNr { margin-right:2px; }
+#cssBtnGoToCart { text-align:right; }
+#cssCartBuyPopupMsg { font-size:14px; position:absolute; top:250px; display:inline; right:0; left:33%; width:310px; background-color:#f0fff0; border:1px solid #b5e1ae; padding:8px; margin:0 0 2px; z-index:9999; }
+#cssCartBuyPopupMsg p { margin:0; padding:0; color:#000; font-weight:bold; letter-spacing:1px; }
+#cssCartBuyPopupMsg a { color:#000; }
+.cssCartBox { text-align:left; border:1px solid #ccc; border-bottom:1px solid #777; font-size:12px; width:191px; }
+.cssCartBoxHasGoods { }
+.cssCartHdr { background:#f5f5f5; color:#444444; font-weight:bold; font-size:12px; padding:5px 10px; text-transform:uppercase; }
+.cssCartBoxInner { position:relative; overflow:auto; background:#fff; }
+#cssCartCostTitle { }
+#cssCartCost { color:#c00; }
+#cssUrlGoToCart { position:absolute; right:20px; top:7px; }
+.cssCartData { display:none; padding:10px; background:#f9f9f9; }
+.cssCartDataRow { }
+.cssCartDataRow_1 { color:#000; width:70%; margin-right:25%; }
+.cssCartDataRow_2 { text-align:right; color:#c00; float:right; }
+.cssCartDataRowArtName, .cssCartDataRowQtyNr, .cssCartDataRow_2 { font-size:11px; }
+.cssCartDataRowSum { margin-top:30px; padding-top:10px; border-top:1px solid #555; }
+.cssCartDataRowSum div { font-weight:bold; }
+.cssCartDataHdr { font-weight:bold; }
+.cssCartCost { font-weight:bold; color:#c00; }
+#frmGoToCart { text-align:right; }
+.cssCartPreview { text-decoration:underline; font-size:10px; color:#d00; margin-top:2px; cursor:pointer; cursor:hand; }
+a.cssUrlCartPreview { font-size:10px; }
+.cssCartButton { float:right; height:30px; }
+
+
+
+
+
+
+/******************** PAGES  ********************/
+#cssOrderList { width:100%; padding:0; margin:0; border:1px solid #ddd; border-left:none; }
+#cssOrderList thead tr { background:#eee; }
+#cssOrderList th { font-size:11px; border-bottom:1px solid #BBBBBB; border-left:1px solid #BBBBBB; border-right:1px solid #eee; color:#000000; font-family:"Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; padding:6px 20px 6px 12px; text-align:left; }
+#cssOrderList td { font-size:11px; padding:6px 6px 6px 12px; color:#666; border:1px solid #eee; border-right-color:#fff; border-bottom-color:#fff; border-top-color:#eee; background:#fff; }
+#cssOrderList td.alt { background:#f7f7f7; }
+#cssOrderList td.over { background:#eee; color:#000; border:1px solid #eee; cursor:pointer; cursor:hand; }
+#cssOrderListBottom { border-top:1px solid #eee; padding-top:4px; font-weight:bold; text-align:center; }
+.cssOrderListSummary { margin-top:20px; }
+.cssOrderListSummary p { text-align:center; }
+.cssOrderListSummary p b { color:#c00; }
+.cssOrderListTextAnnuled {  }
+.cssOrderListTextAnnuled p { font-size:14px; text-align:center; }
+.cssTblRoundBodyGray { background-color:#ececec; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; padding:0; }
+.cssTblRoundBody { border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; padding:0; }
+.cssFrmRowList { width:100%; border:0; padding:0; }
+.cssFrmRowList th { text-align:left; border-bottom:1px solid #d9d9d9; padding:10px; white-space:nowrap; width:205px; }
+.cssFrmRowList td { text-align:left; border-bottom:1px solid #d9d9d9; }
+.cssFrmRowList td div { padding-right:10px; }
+.cssFrmRowList th.cssTblRowNoBorder, .cssFrmRowList td.cssTblRowNoBorder { border:0; white-space:nowrap; width:100%; }
+.cssTblBorder table { margin:0; }
+.cssTblResult { width:100%; margin-left:auto; margin-right:auto; margin-top:10px; }
+.cssTblResult th { white-space:nowrap; font-size:11px; }
+.cssTblResult th a { display:block; }
+.cssTblResult td { border-bottom:1px solid #D9D9D9; _line-height:28px; text-align:left; padding:0px 3px; }
+.cssOrderItemBtnRowList { margin:20px 0; }
+.cssOrderItemBtnRowList div { float:left; }
+.cssOrderItemBtnRowList div.cssOrderItemBtnPrint { float:right; }
+#cssOrderItemDownloadLinkCon { margin-bottom:15px; }
+#cssOrderItemDownloadLinkCon p { font-size:11px; }
+.cssNewsDescrShort { font-size:11px; clear:both; }
+#cssNewsActiveList { overflow:hidden; }
+.cssNewsUrlReadMore { float:right; text-align:right; }
+.cssNewsUrlReadMore a { font-size:11px; }
+.cssNewsActiveListRowAuthor { float:right; font-size:11px; }
+.cssPagePayWaiting strong { font-weight: bold; text-decoration: underline; }
+.cssOrderGen {
+   font-size: 11px;
+   line-height: 10px;
+}
+.cssOrderSum { color: #c62d06; }
+tr.cssTblOrderSum span {
+   font-size: 15px;
+   font-weight: bold;
+   line-height: 22px;
+}
+tr.cssTblOrderSum .cssOrderSum { font-size: 17px; }
+.cssTblArtItem, .cssTblColLast { font-size: 12px; }
+
+
+/******************** FAQ  ********************/
+.cssFaqList { font-size:14px; }
+.cssFaqHeadlineBig { font-family:tahoma; font-size:20px; font-weight:bold; text-align:center; }
+.cssFaqHeadlineSmall { font-weight:bold; margin:0 0 0.6em; }
+.cssFaqListUrlRedirectNr { float:left; padding-right:7px; width:25px; }
+.cssFaqListUrlTop { }
+.cssFaqListUrlReadMoreRow { margin:10px 0 3px 0; }
+.cssFaqListUrlRedirectRow div p { margin-bottom:0.5em; }
+.cssFaqListUrlRedirectQuestion { margin-left:30px; }
+.cssFaqListUrlList { text-align:right; margin-bottom:0.5em; }
+.cssFaqListUrlList p { margin-bottom:0.7em; }
+.cssFaqRowList hr.cssHr { margin-bottom:18px; }
+
+
+
+
+
+
+/******************** CUSTOMER  ********************/
+.cssCustEditInf, .cssCheckOutCustEditInf { padding:0; border:0; margin:0 auto; min-width:540px; text-align:left; clear:both; }
+.cssCustEditInf { max-width:600px; }
+#cssCustEditInf select { width:122px; }
+.cssCustEditRow { clear:both; float:left; margin-bottom:6px; padding:0; text-align:left; width:100%; }
+#bIsViewCustEditDeliveryAddress { border:0; }
+.cssCustEditbIsViewCustEditDeliveryAddressCell { margin-top:10px; }
+input.cssCustEditRowCellMarginRight { margin-right:5px; }
+.cssCustEditRow .cssCustEditRowCell_1 { float:left; padding:0; margin:2px 0 0 0; width:130px; padding-right:10px; }
+.cssCustEditRow .cssCustEditRowCell_2 { float:left; width:300px; }
+.cssCustEditRow label { font-size:14px; font-weight:normal; cursor:pointer; }
+.cssCustEditRow label.cssCustEditCheckboxLabel { font-size:12px; font-weight:bold; }
+.cssCustEditContactCell_1, .cssCustEditContactCell_2, .cssCustEditDeliveryCell_1, .cssCustEditDeliveryCell_2 { float:left; padding:0; margin:0; }
+.cssCustEditContactCell_1 { width:140px; margin-top:5px; }
+.cssCustEditDeliveryCell_1 { width:86px; }
+.cssCustEditContactCell_2, .cssCustEditDeliveryCell_2 { width:156px; }
+.cssMandatoryFld { color:#c00; font-size:12px; }
+.cssCustEditHdrAddress h2 { clear:right; float:left; margin-bottom:0.5em; }
+.cssCheckOutCustEditInf #cssCustEditContact, .cssCheckOutCustEditInf #cssCustEditDelivery { padding-right:26px; }
+.cssCustEditBtnRow .cssCustEditColLeft, .cssCustEditBtnRow .cssCustEditColRight { float:left; width:50%; margin-bottom:10px; }
+.cssCustEditBtnRow .cssCustEditColLeft { font-size:16px; }
+.cssCustEditBtnRow .cssCustEditColRight { text-align:right; }
+#cssCustEdit { margin-top:20px; }
+#cssCustEditBtnRow { padding:12px; text-align:center; clear:both; }
+#cssCustEditBtnCancelBack, #cssCustEditBtnSave, #cssAc_ArtTellFriendBtnClose, #cssAc_ArtTellFriendBtnSend { float:left; width:50%; }
+#cssCustLoginLostPwd { margin-top:20px; }
+#cssCustLoginLostPwdRow a { }
+#cssCustLoginEmailPwd { padding:0px 0px 30px 0px; }
+#cssCustLoginEmailRow, #cssCustLostPwdEmailRow, #cssCustLoginPwdRow { float:left; padding-right:5px; }
+#cssCustLoginBtnRow, #cssCustLostPwdBtnRow { float:left; margin-top:12px; }
+#cssCustItemCheckOutMsg { float:left; padding-right:10px; }
+.cssCustEditSpace { margin-right:0px; }
+.cssCustEditDashSpace { margin-left:0px; margin-right:-3px; }
+.cssCustItemMsg { font-size:12px; }
+#cssCustLoginPageContainer { padding:10px; }
+#cssCustLoginAdminOverrideLbl { white-space:normal; width:320px; }
+.cssCheckOutCustInfList .cssCheckOutPadding { padding-top: 0; }
+#cssCustEditGeneralTopFieldsCon { margin-bottom: 10px; }
+.cssHoriRadioCheckboxLbl { display:-moz-inline-stack; display: inline-block; zoom:1; *display:inline; padding: 5px 20px 0 20px; cursor: pointer; font-weight: normal;  }
+.cssHoriRadioCheckboxLbl input[type="radio"], .cssHoriRadioCheckboxLbl input[type="checkbox"] { float: left; margin: 4px 0 0 -20px; vertical-align: middle; cursor: pointer; }
+#cssCustEditAddressesCon { margin-bottom: 20px; }
+.cssCustEditContact { width: 440px; float: left; margin-right: 20px; }
+.cssCustEditDelivery { width: 440px; float: left; }
+#cssCustEditGeneralBottomFieldsCon { }
+
+
+.cssTabMenu {  }
+.cssTabMenu ul { list-style-type:none; margin:0; padding:0; height:30px; }
+.cssTabMenu li { border:1px solid #d9d9d9; background:#fff; -moz-border-radius:5px; display:block; float:left; padding:0; margin:5; height:29px; }
+.cssTabMenu li.cssTabActive { background:#222222; color:#fff; }
+.cssTabMenu li p { margin:6px; font-weight:bold; font-size:11px; }
+.cssTabMenu li a { color:#000; text-decoration:none; }
+.cssTabMenu li.cssTabActive a { color:#fff; }
+.cssTabMenuContent .cssVisible { display:block; }
+.cssTabMenuContent { clear:both;}
+.cssTabMenuContainer { float:left; }
+.cssTabMenuContainer .cssCustEditContact { overflow:hidden; }
+.cssTabMenuContainer .cssTblRoundBottomWhite {  }
+#cssWelcomeViewCustEditBtnCon { float:left; margin-left:138px; margin-top:5px; }
+
+/* Customer favourite list */
+#cssCustFavListPopupBody { background:#fff; color:#000; height:100%; overflow:hidden; width:450px; }
+.cssCustFavListContent { color:#000; font-size:11px; }
+.cssCustFavList table { font-size:10px; margin-top:10px; }
+.cssCustFavList table th { font-size:11px; color:#fff; background:#000; }
+.cssCustFavList table td { border-width:0 0 1px 0; border-color:#ccc; border-style:solid; }
+.cssCustFavList table td.cssCustFavListTdFirst { border-width:0 0 1px 1px; }
+.cssCustFavList table td.cssCustFavListTdLast { border-width:0 1px 1px 0; }
+.cssCustFavList table .cssOddRow { background:#FCFCFC; }
+.cssCustFavList table .cssEvenRow { background:#EAEAEA; }
+#cssCustFavListPopupBody .cssVisible { display:block; }
+.cssCustFavList table tr.cssCustFavListMarkRow td { background:#CEFF8E; font-size:12px; font-weight:bold; }
+.cssCustFavList table tr.cssNewItem td { background:#fff6bf; border-color:#ccc; font-size:12px; }
+.cssCustFavListExpl span.cssNewItem, .cssCustFavListExpl span.cssCustFavListMarkRow  { padding:3px; width:25px; height:20px; }
+.cssCustFavListExpl span.cssCustFavListMarkRow { background:#CEFF8E; border-style:solid; border-width:1px; font-size:12px; font-weight:bold; border-color:#aaaaaa; }
+.cssCustFavListExpl span.cssNewItem { background:#fff; border-color:#AAAAAA; border-style:dotted; border-width:1px; font-size:12px; font-weight:bold; color:#aaaaaa; }
+.cssCustFavListExpl li { font-size:10px; font-weight:bold; margin:5px; }
+.cssCustFavListExpl ul { list-style-type:none; margin:0; padding:0; }
+.cssCustFavListExpl { margin:10px 0 ; font-size:11px; }
+#cssCustFavListCreateCtrlContainer { height:40px; }
+#cssCustFavListCreateCtrlContainer label { float:left; margin-right:4px; padding-top:5px; }
+#cssCustFavListCreateName, #cssCustFavListCreateBtn { float:left; }
+#cssCustFavListCreateBtn { margin-left:10px; margin-top:3px; }
+.cssCustFavListSaveBtnContainer { display:block; float:left; margin-top:8px; }
+.cssCustFavListContent h4 { margin-top:15px; }
+.cssCustFavListContent label { font-size:12px; }
+#cssCustFavListSelBox { margin-bottom:10px; min-width:100px; *margin-bottom:0; }
+p.cssHint { margin:0; font-size:11px; font-weight:bold; }
+
+.cssCustFavListSendContainer { height:120px; }
+.cssCustFavListSendContainer input.cssCustFavListSendEmailBtn { margin-top:15px; }
+.cssCustFavListSend { text-decoration:none;}
+ul.cssCustFavListSendUl { list-style-type:none; }
+input.cssCustFavListSendEmailBtn { float:right; }
+.cssCustFavListErrorMsg, .cssCustFavListSendMsg { display:none; font-size:11px; position:relative; top:10px; *float:left; }
+.cssCustFavListErrorMsg { color:red; }
+.cssCustFavListSendMsg { color:green; }
+h3.cssNoCustListInDb { font-size:14px; font-weight:bold; width:100%; text-align:center; color:#aaa; }
+.cssCustFavListArtQtyNr { width:35px; }
+.cssNewItemMsg { float:right; padding:5px; margin-top:5px; background:#FFF6BF; border:2px solid #FFD324; color:#514721; }
+#cssCustInfoFavListContainer table { *width:90%;}
+
+
+
+/******************** ORDER RETURN  ********************/
+#cssOrderRetFrm { width:460px; }
+.cssOrderRetFrmRow { float:left; margin-bottom:6px; }
+.cssOrderRetFrmCell { float:left; }
+#cssOrderRetFrmRow_1Cell_1, #cssOrderRetFrmRow_3Cell_1, #cssOrderRetFrmRow_3Cell_2, #cssOrderRetFrmRow_4Cell_1, #cssOrderRetFrmRow_4Cell_2 { margin-right:7px; }
+
+
+
+
+
+
+/******************** CONTACT  ********************/
+#bodyContact { overflow-x:hidden; }
+#bodyContact #frm { overflow:hidden; }
+ul#ulContactOwnPageList { font-size:14px; padding-left:3px; }
+.cssContact { margin-top:10px; }
+.cssContactSendQuestions { font-size:13px; font-weight:bold; }
+.cssContactFrm { float:left; width:100%; }
+.cssContactFrmFld { float:left; margin-bottom:6px; }
+#cssContactFrmRowBtn, #cssOrderRetFrmRowBtn, #cssAc_ArtTellFriendFrmRowBtn { margin-right:6px; text-align:right; }
+
+
+
+
+
+
+/******************** FORM  ********************/
+select, textarea, input.cssFrmFld, input.cssFrmFldCheckOutCartRowArtQtyNr, input.cssTxtArtSearch, input.cssTxtNewsletter { color:#666666; border:0; padding:2px 2px 2px 4px; margin:0; border:3px double #ccc; font:13px Arial, Helvetica, sans-serif; }
+input.cssTxtArtSearch, input.cssTxtNewsletter { width:158px; }
+input.cssFrmFldCheckOutCartRowArtQtyNr { text-align:center; }
+select:focus, textarea:focus, input.cssFrmFld:focus, input.cssFrmFldCheckOutCartRowArtQtyNr:focus, input.cssTxtArtSearch:focus, input.cssTxtNewsletter:focus { border-color:#aaa; background-color:#ffe; }
+input.cssFrmFldBig { font-size:13px; }
+textarea { padding:2px 2px 2px 4px; }
+select { padding:0; }
+select.cssSmall { font-size:10px; }
+input.cssTxtArtSearch, input.cssTxtNewsletter { overflow:hidden; }
+input.cssBtnDefault, input.cssBtnBig { cursor:pointer; font-weight:bold; }
+input.cssBtnBig { font-size:13px; }
+input.cssBtnBuy, input.cssBtnBuyBig { cursor:pointer; font-weight:bold; }
+input.cssBtnBuyBig { font-size:14px; }
+input.cssBtnRed { color:#fff; background-color:#d50000; cursor:pointer; font-weight:bold; }
+input.cssTxtArtSearch { position:relative; z-index:98; } /* Required for jQuery UI Autocomplete */
+input.cssBtnArtSearch { z-index:99; }
+.cssTextSubmit { background-color: transparent; cursor: pointer; }
+
+
+
+
+/******************** ACCESSORIES  ********************/
+.cssAc_ArtTellFriendFrmFld { margin:20px 0; }
+.cssAc_ArtTellFriendAboutFollowingArt { font-size:15px; font-weight:bold; }
+.cssAc_ArtTellFriendArtItemHeadline { font-size:14px; font-weight:bold; }
+.cssPageAc_CustEditShutOutVisitorItem { max-width:600px; }
+tr.cssTblRowNoBorderBottom td { border-bottom:0px solid white; white-space:nowrap; }
+td.cssTblColFirst { border-left:1px solid #d9d9d9; white-space:nowrap; font-size:12px; }
+td.cssTblColLast { padding:5px; border-right:1px solid #d9d9d9; white-space:nowrap; }
+.cssAc_ArtCompareCell {  }
+.cssCustEditCopyDeliveryAdressCell_2 label { font-size:0.8em; font-weight:bold; }
+#CopyDeliveryAdress { float:right; }
+.cssCheckOutCustEditInf input.cssFormFldRequired { border:3px double red; }
+.cssCheckOutPayType { float:left; width:100%; }
+.cssCheckOutRowSummary .cssCheckOutColLeft { width:60%; }
+#cssCheckOutCustLoginContainer .cssCheckOutRow { border:0px; }
+.cssCustEditFormColLeft { float:left; clear:left; width:33%; }
+.cssCustEditFormColCenter, .cssCustEditFormColRight { float:left; width:33%; }
+.cssCustEditRow { width:100%; }
+.cssCustInfoFullWidthFld { width:280px; }
+.cssCustInfoChangePassFld { width:180px; }
+.cssCustInfoSmallFld { width: 140px; }
+#cssGetExtCustInfoBtn { margin-left: 15px; vertical-align: middle; }
+.cssCheckOutKlarnaPartPay { margin-top: 5px; }
+#cssKlarnaPartPayTermsCon a { margin-left: 5px; font-size: 14px; font-weight: normal; }
+
+
+
+
+/******************** CHECKOUT  ********************/
+#cssCheckOutPage { max-width:800px; min-width:600px; margin:0 auto; text-align:left; }
+.cssCheckOutRow .cssCheckOutPadding { overflow:visible; float:left; width:98%; }
+.cssCheckoutCartRowQtyExceedStock { background-color:#ed4242; }
+.cssCheckOutPadding { padding:8px 11px 8px 11px; }
+#cssTermsApprovedCheckBox, #cssNewsletterCheckBox { width: 16px; }
+.cssCheckOutAdditionalTerms { margin-left: 20px; }
+.cssCheckOutTerms a, .cssCheckOutAdditionalTerms a { font-weight: normal; }
+.cssFrmFldCheckOutCartCostOfGoodsHidden { display:none; }
+.cssFrmFldCheckOutCartCostOfGoods, .cssCheckOutCostOfGoodsSumToPayCost, .cssCheckOutCostOfGoodsDiscountOrderStrCost, .cssCheckOutCostOfGoodsDiscountExclVatNrCost, .cssFrmFldCheckOutCartCostOfGoodsExclVatNrTotalNr { background-color:transparent; border-width:0; font-weight:bold; text-align:right; margin-right:1px; }
+.cssCheckOutArtAndArtPrmName { font-size:12px; }
+.cssCheckOutKlarnaPartPayCustYearlyIncomeNr { margin-bottom:20px; }
+.cssCheckOutCostOfGoodsTxt, #cssCheckOutDiscountCodeHdr, #cssCheckOutDiscountCodeTxt, #cssCheckOutPayTypeRowList, #cssCheckOutFreightTypeRowList, #cssCheckOutKlarnaPartPayCustYearlyIncomeNr, #cssCheckOutDiscountCodeContent, #cssCustEditInf { color:#000; }
+.cssCheckOutCostOfGoodsTxt { text-align:right; }
+.cssFrmFldCheckOutCartCostOfGoods, .cssCartCostOfGoodsExclVatNrTotalNrTxt, .cssCheckoutSumAmountNr { font-size:1em; font-weight:bold; color:#444; }
+.cssCheckOutCostOfGoodsSumToPayCost, .cssCheckOutCostOfGoodsSumToPayTxt { font-size:16px; }
+#cssUrlCustLogin { padding:2px 0 2px 0; }
+a.cssUrlCustLogin { font-size:13px; font-weight:bold; }
+#cssCheckOutDiscountCode { margin-left:5px; }
+#cssCheckOutDiscountCodeBox, #cssCheckOutKlarnaPartPayCustYearlyIncomeNrBox { line-height:15px; }
+.cssCheckOutKlarnaPartPayCustYearlyIncomeNrBoxInner { margin:10px 0 50px 0; }
+.cssCheckOutKlarnaPartPay { border-collapse:collapse; }
+.cssCheckOutKlarnaPartPay td { padding:0; padding-right:8px; }
+.cssCheckOutKlarnaPartPayRowCost { text-align:left; }
+.cssCheckOutShipmentRowRadioBtn { width:1px; vertical-align:top; }
+.cssCheckOutPayTypeRowCostExclVatNr, .cssCheckOutFreightTypeRowCostExclVatNr { font-size:12px; width:50px; font-weight:bold; text-align:right; }
+#cssCheckOutKlarnaPartPayCustYearlyIncomeNrTxt label { font-weight:normal; }
+.cssCheckOutDiscountCodeMsg { float:left; margin:0 0 0 20px; padding:3px; white-space:nowrap; clear:none; }
+.cssCheckOutDiscountCodeTxt {  list-style-type:none;  }
+.cssCheckOutDiscount label { clear:both; display:block; }
+.cssCheckOutDiscount { float:left; width:650px; }
+#cssCheckOutDiscountCodeContent { float:left; padding:0; margin:0; vertical-align:top; width:auto; }
+#cssCheckOutDiscountCodeContent td { padding:1px 1px 1px 0; }
+.cssCheckOutArtListHdrRow { white-space:nowrap; }
+.cssCheckOutArtListHdrRow .cssCheckOutColRight_1, .cssCheckOutArtListHdrRow .cssCheckOutColRight_2, .cssCheckOutArtListHdrRow .cssCheckOutColRight_3 { top:3px; }
+.cssCheckOutArtCellHdr { float:left; padding-bottom:25px; white-space:nowrap; }
+.cssCheckOutArtCell { vertical-align:top; padding:1px; }
+.cssCheckOutArtCellArtImg { width:50px; text-align:center; }
+.cssCheckOutArtCellArtName { width:140px; }
+.cssCheckOutArtCellArtQtyNr { width:40px; text-align:center; }
+.cssCheckOutArtCellArtCostNr { width:46px; text-align:right; }
+.cssCheckOutArtCellArtSumCostNr, .cssCheckOutCostOfGoodsCost, .cssCheckOutCostOfGoodsSumToPayCost { width:120px; text-align:right; }
+.cssCheckOutCostOfGoodsCostExclVatNrTotalNr { text-align:right; }
+.cssCheckOutCostOfGoodsCostExclVatNrTotalNr input { background-color:transparent; border-width:0; font-weight:bold; text-align:right; }
+.cssCheckOutStockNrExceedArtStockNrMsgRow { margin-top:10px; font-size:12px; font-weight:bold; }
+.cssCheckOutArtListStockStatus, .cssCheckOutArtListModelId { color:#ababab; font-size:11px; }
+.cssCheckOutSumToPay { float:left; width:100%; }
+.cssCheckOutRowSummary .cssCheckOutPadding { padding:6px; }
+.cssCheckOutRowSummary .cssCheckOutPadding .cssCheckOutColRight .cssCheckOutColRight_3 { top:0; }
+.cssCheckOutCostExclVatNrSmall { font-weight:bold; }
+.cssCheckOutCostExclVatNrSmall .cssArtCostDiscountExclVatNr { width:auto; margin-left:20px; font-weight:normal; white-space:nowrap; }
+.cssCheckOutCostExclVatNrBig { font-weight:bold; color:#800; white-space:nowrap; }
+.cssCheckOutLabelBig { font-size:1.2em; font-weight:bold; color:#444; }
+.cssCheckOutCostExclVatNrHuge { color:#800; font-weight:bold; font-size:19px; }
+.cssCheckoutSumField { min-width:130px; _width:130px; }
+.cssCheckOutLabelWorth { font-weight:bold; color:#444; }
+.cssCheckOutLabelDiscount { font-size:1.2em; color:#000; }
+#cssCheckoutDiscountInfoText { font-weight:normal; font-size:small; }
+.cssCheckOutLabel-property { color:#777; }
+.cssCheckOutLabel-value { color:#555; }
+.cssCheckOutInputTxt { border:1px solid #ccc; }
+.cssCheckOutUrlRemove { color:#800; padding-right:15px; }
+.cssCheckOutUrlMoreInf { color:#800; padding-right:10px; clear:left; }
+.cssCheckOutDiscount label.cssCheckOutLabel, .cssCheckOutRowTitle label.cssCheckOutLabel { font-size:14px; text-decoration:underline; }
+.cssCheckOutFldList { margin-bottom:50px; }
+.cssCheckOutColRight { float:right; width:110px; text-align:right; position:relative; }
+.cssCheckOutColLeft { float:left; width:110px; }
+.cssCheckOutColCenter { float:none; margin:0 120px; }
+#cssCheckoutCartUpdateCon { min-height:25px; _height:25px; }
+.cssCheckOutColCenter_1 { margin-top:4px; }
+.cssCheckOutColRight_1 { position:absolute; top:13px; left:0; }
+.cssCheckOutColRight_2 { position:absolute; top:13px; right:100px; }
+.cssCheckOutColRight_3 { position:absolute; top:13px; right:0; }
+.cssCheckOutCartMsg { margin:5px 2px; }
+.cssCheckOutRow { position:relative; border-bottom:1px solid #dedede; float:left; width:100%; height:auto; }
+.cssCheckOutRowTitle, .cssCheckOutRowTitle a { font-size:12px; font-weight:bold; }
+.cssCheckOutEnterDiscountCode { font-size:13px; }
+.cssCheckOutRowDescr label { font-weight:normal; }
+.cssCheckOutRowDescr_2 { padding-right:15px; }
+.cssCheckOutRowDescr_2 a { color:#666; }
+.cssCheckOutArtList .cssCheckOutColRight { width:350px; }
+.cssCheckOutArtList .cssCheckOutRowSummary { color:#555; background:#f7f7f7; padding:0; }
+.cssCheckOutRowSummary { padding:8px; }
+.cssCheckOutArtList .cssCheckOutRowSummary .cssCheckOutColCenter { margin-left:0; }
+.cssCheckOutArtList .cssCheckOutDiscount { margin-top:5px; color:#555; }
+.cssCheckOutArtList .cssCheckOutRow .cssCheckOutPadding .cssCheckOutColCenter .cssCheckOutRowDescr { float:none; }
+.cssCheckOutPayTypeList .cssCheckOutColCenter_1, .cssCheckOutFreightTypeList .cssCheckOutColCenter_1 { float:left; width:25px; }
+.cssCheckOutPayTypeList .cssCheckOutColCenter_2, .cssCheckOutFreightTypeList .cssCheckOutColCenter_2 { margin-left:25px; }
+.cssCheckOutPayTypeList .cssCheckOutRowDescr_2, .cssCheckOutFreightTypeList .cssCheckOutRowDescr_2 { display:none; margin-top:10px; }
+.cssCheckOutPayTypeList .cssCheckOutColLeft, .cssCheckOutFreightTypeList .cssCheckOutColLeft { text-align:center; }
+.cssCheckOutRowTitle, .cssCheckOutRowDescr, .cssCheckOutRowDescr_2 { float:left; width:450px; word-wrap:break-word;  }
+.cssCheckOutColLeft .cssArtListImg { float:none; margin-right:0; width:110px; }
+.cssCheckOutCustInfList .cssCheckOutColRight { overflow:auto; text-align:left; width:50%; }
+.cssCheckOutCustInfList .cssCheckOutColRight p { max-width:350px; }
+#cssCheckoutSubmitCon { float:right; text-align:right; width:40%; }
+#cssCheckoutWarnSomeCartQtyIsExceedingStock { color:#ed4242; font-size:14px; font-weight:bold; }
+.cssCheckOutCustInfList .cssCheckOutColLeft { overflow:auto; width:48%; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_FrmData { float:left; width:48%; margin-right:10px; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_FrmData_2 { float:left; width:48%; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_FrmContent { }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_Login div { overflow:auto; margin-top:10px; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_Login label { float:left; width:100px; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_LoginBtn { position:absolute; right:15px; top:15px; padding:4px; }
+.cssCheckOutCustInfList .cssCheckOutCustInfDataList_LoginFrm { display:none; width:200px; height:200px; position:absolute; right:15px; top:15px; padding:15px; padding-bottom:30px; -moz-border-radius:5px; background:#eee; }
+.cssCheckOutCustInfDataList_FrmData div, .cssCheckOutCustInfDataList_FrmData_2 div { margin-bottom:4px; }
+.cssCheckOutCustInfDataList_FrmData div label, .cssCheckOutCustInfDataList_FrmData_2 div label { clear:left; font-weight:normal; float:left; padding-right:10px; width:120px; }
+.cssCheckOutCustInfDataList_FrmData input, .cssCheckOutCustInfDataList_FrmData_2 input, .cssCheckOutCustInfDataList_FrmData select, .cssCheckOutCustInfDataList_FrmData_2 select, .cssCheckOutCustInfDataList_FrmData textarea, .cssCheckOutCustInfDataList_FrmData_2 textarea { font-size:11px; }
+.cssCheckOutCustInfList .cssCheckOutColLeft { overflow:auto; width:50%; }
+.cssCheckOutCustInfList .cssCheckOutColRight { overflow:auto; text-align:left; width:50%; }
+.cssCheckOutCustInfList .cssCheckOutColRight_2 { right:140px; top:0; }
+.cssCheckOutCustInfList .cssCheckOutColRight_3 { top:40px; }
+.cssCheckOutCustInfList .cssCheckOutConfirmSubmit { margin-top:20px; }
+h1.cssCheckOutHdr { margin:0 0 4px 0; }
+.cssCheckOutPayAndFreightType { margin-top:10px; }
+.cssCheckOutKlarnaSelBoxBig { font-weight:bold; color:#800; }
+.cssCheckOutPayAndFreightType, .cssCheckOutCustInfList, .cssCheckOutFldList { float:left; width:100%; }
+#cssCheckOutCustLoginContainer { float:none; clear:both; margin-top:10px;  }
+#cssCheckoutAjaxLoaderCon { width:16px; height:11px; margin-right:10px; vertical-align:baseline; }
+.blockMsg { width:40%; top:30%;left:30%; text-align:center; background-color:#000; opacity:0.7; filter:alpha(opacity=70);padding: 10px; cursor:wait; }
+#cssCheckoutSendingOrderMsg { font-size:14px; font-weight:bold; color: #fff; }
+#cssCheckoutSendingOrderIndicator { width:15px; text-align:left; }
+#cssCheckoutThanksWaitingForExtOrderInfo { font-size:12px; font-weight:bold; font-style:italic; }
+#cssPayProcWaitingSubmit { margin-top: 30px; font-style: italic; }
+#cssPayProcWaitingLoader { width: 100%; height: 32px; background: transparent url('Img/loading.gif') no-repeat center center; }
+#btnCartDiscountReload { margin-left: 2px; vertical-align: middle; }
+.cssCheckoutTotalVat { color: #ABABAB; }
+#cssKlarnaCheckOutContainer {
+   float: left;
+   width: 100%;
+}
+#cssKlarnaCheckOutContainer #cssLowestCostWarning {
+   margin: 50px auto;
+   width: 450px;
+}
+.cssCheckOutPayTypeList div.cssCheckOutColLeft img { max-width: 110px; }
+
+
+
+
+
+/******************** IE & DEBUG  ********************/
+#cssArtItemImg_1 { overflow:hidden; }
+#cssPageCell_1,#cssPageCell_2,cssPageCell_3 { display:inline; }
+
+.lt-ie8 .cssCustEditRow { height:auto; }
+.lt-ie8 .cssArtItemImgThumbGallery { text-align:left; }
+.lt-ie8 .cssCheckOutRowSummary { height: 120px; }
+
+.lt-ie7 .cssPageCell_1 { margin-right:0; }
+.lt-ie7 .cssHr_2 { background: #fff; }
+.lt-ie7 .cssArtItemDataRow_1 { overflow: inherit; }
+.lt-ie7 .cssArtItemHdr { height: 40px; overflow: hidden;}
+.lt-ie7 .cssSquareBoxReflection1 { background-image:none; }
+.lt-ie7 #cssHeadline { height:32px;overflow:hidden;}
+.lt-ie7 .cssTabMenuGalleryAndList { margin:0; padding:0; float:none; }
+.lt-ie7 .cssTabMenuGalleryAndList div.cssUnmarked, .cssTabMenuGalleryAndList div.cssMarked { width:100px; overflow:hidden;  }
+.lt-ie7 .cssArtList { width:540px; overflow:hidden;}
+.lt-ie7 .cssArtItemDataRow_2 { width:26%; overflow:hidden; float:left;}
+.lt-ie7 .cssPageCell_2 { overflow:hidden; }
+.lt-ie7 .cssCheckOutRow { height:60px; }
+.lt-ie7 .cssVr { display:none; }
+.lt-ie7 .cssCheckOutRowSummary { height: 120px; }
+
+
+
+
+
+
+/******************** STARWEB TRADEMARK  ********************/
+#cssStarwebTrademark  {float:left; text-align:center; padding:1px; }
+#cssStarwebTrademark a { text-decoration:none; font-size:10px; font-family:Tahoma, Arial, Helvetica, sans-serif; height:20px; }
+#cssStarwebTrademark a em { border:1px solid #ccc; background:#fff; margin-left:2px; padding:1px; color:#444; font-style:normal; }
+#cssStarwebTrademark a span { border:1px solid #000; padding:1px 2px 1px 2px; background-color:#000; font-weight:bold; color:#fff; }
+#cssStarwebTrademark a:hover {}
+#cssStarwebTrademark a:hover em { color:#fff; border-color:#000; background:#000;  }
+#cssStarwebTrademark a:hover span { background-color:#666; border-color:#666; }
+
+
+
+
+
+
+/******************** CYCLE  ********************/
+#cssCycleBody { display:block; clear:both; height:300px; margin-bottom:15px; }
+#cssCycleContent { height:100%; width:100%; }
+#cssCycleContent .cssCycleItem:not(:first-child) { display: none; }
+.cssCycleItem { width:100%; height:100%; overflow: hidden; }
+.cssCycleTitleTag, .cssCycleImg { float:left; display:block; }
+.cssCycleTitleTag { width:30%; float:left; display:block; }
+.cssCycleImg { width:70%; float:left; display:block; }
+.cssCycleImg img { max-width: 100%; }
+.cssCycleText { padding:10px; display:block; font-size:1.1em; }
+.cssCycleTitleTagNoImg { width:100%; height:100%; display:block; float:none; }
+.cssCycleNoImg { display:none; }
+.cssCycleItemUrl { position:absolute; bottom:10px; right:10px; }
+.cssCycleImg a { text-align:left; }
+#cssCycleBody p { margin:5px; font-size:1.1em; }
+#cssCycleBody h3 { margin:5px; }
+
+
+
+
+
+
+/***************** AC_SOCIAL - RATING ************************/
+/* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ */
+div.rating-cancel,div.star-rating { float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden;margin-bottom:15px; }
+div.rating-cancel,div.rating-cancel a { background:url("../Image/Setting/delete.gif") no-repeat 0 -16px; }
+div.star-rating,div.star-rating a { background:url("../Image/Setting/star.gif") no-repeat 0 0px; }
+div.rating-cancel a,div.star-rating a { display:block;width:16px;height:100%;background-position:0 0px;border:0; }
+div.star-rating-on a { background-position:0 -16px!important; }
+div.star-rating-hover a { background-position:0 -32px; }
+/* Read Only CSS */
+div.star-rating-readonly a { cursor:default !important; }
+/* Partial Star CSS */
+div.star-rating { background:transparent!important;overflow:hidden!important; }
+/* END jQuery.Rating Plugin CSS */
+
+
+
+
+
+
+/******************** jQuery UI  ********************/
+.ui-widget-header { padding:.8em; margin-bottom:1em; border:2px solid #ddd; max-width:500px; font-size:12px; }
+.ui-widget-header { background:#FBE3E4; color:#8a1f11; border-color:#FBC2C4; }
+.ui-widget { font-size:12px; }
+.ui-dialog { padding:1.7em; }
+.ui-dialog .ui-dialog-buttonpane { padding-bottom:0; }
+.ui-effects-transfer { border:3px dotted #000; }
+.cssDialogAlert { padding:5px; }
+.cssDialogAlert ul { list-style-type:none; margin:0; padding:0; }
+.cssDialogAlert li { list-style-type:none; margin:0; padding:0; }
+.cssDialogAlert .ui-dialog-titlebar { padding-top:1.4em; }
+.cssDialogAlert .ui-dialog-title { display:none; }
+
+
+
+
+
+
+/******************** Utility error markers/disable classes ***************/
+.cssBtnDisabled { background:#dddddd; cursor:default; }
+input.cssInputError { border:3px double red; padding:2px 2px 2px 4px; font:13px Arial,Helvetica,sans-serif; margin:0; color:#666666; }
+
+
+
+
+
+
+/******************** Order Downloads  ********************/
+#cssPageOrderDownload #cssOrderDownloadToOrderLinkCon { margin-bottom:10px; }
+.cssOrderDownloadItemHdrTh { background:#EEE; border-top:1px solid #D9D9D9; border-bottom:1px solid #D9D9D9; }
+.cssOrderDownloadItemHdrThFirst { border-top:0; }
+#cssPageOrderDownload table { font-size:11px; border:1px solid #D9D9D9; border-radius:6px }
+.cssOrderDownloadItemExtraItemInfoTd { font-style:italic; padding-top:1em; color:#888; }
+
+
+
+
+
+
+/******************** Generic CSS Button  ********************/
+.cssGenericButton {
+   background-image: url(../../public/img/general-button-right.png);
+   background-position: top right;
+   background-repeat: no-repeat;
+   display: block;
+   float: left;
+   font-size: 12px;
+   line-height: 22px;
+   padding-right: 10px;
+   text-decoration: none;
+}
+.cssGenericButton span {
+   background-image: url(../../public/img/general-button-left.png);
+   background-position: top left;
+   background-repeat: no-repeat;
+   display: block;
+   padding-left: 10px;
+}
+.cssGenericButton:hover {
+   background-color: #000;
+   color: #fff;
+}
+.cssGenericRedButton {
+   background-color: #c00;
+   color: #fff;
+}
+.cssGenericGrayButton {
+   background-color: #828282;
+   color: #fff;
+}
+
+
+
+/***** Javascript booking block and other theme specific css *****/
+
+
+
+/* Demobutiken */
+.theme-demobutiken .cssBookingBlock { overflow: hidden; margin-bottom: 20px; }
+.theme-demobutiken .cssBookingBlock .cssGenericButton { margin: 15px; }
+.theme-demobutiken #cssBookingView { padding-top: 10px; }
+
+
+
+/* Lekfull */
+.theme-lekfull .cssBookingTitle { font-weight: bold; margin-bottom: 5px; }
+.theme-lekfull .cssBookingBlock { }
+.theme-lekfull .cssBookingBlock .cssGenericButton { background-color: #c00; color: #fff; margin-bottom: 20px; }
+.theme-lekfull .product-list { width: 420px; }
+.theme-lekfull .cssBookingDay .cssBookingDayContent,
+.theme-lekfull .cssBookingDayDisabled .cssBookingDayContent { width: 80px; }
+.theme-lekfull .product-list .short-description { width: 378px; }
+
+
+
+/* Spektra */
+.theme-spektra .cssBookingBlock { overflow: hidden; margin: 5px 0px 20px; }
+.theme-spektra .cssBookingBlock .cssGenericButton { }
+.theme-spektra .product-list { width: 500px; }
+.theme-spektra .product-list .short-description { width: 460px; }
+.theme-spektra #cssBookingView { padding-top: 10px; }
+
+
+
+/* Teknik */
+.theme-teknik .cssBoxTitle { overflow: hidden; }
+.theme-teknik .cssBookingTitle { padding: 5px 10px; width: 202px; }
+.theme-teknik .cssBookingBlock {overflow: hidden; margin-bottom: 20px; background: #fff; }
+.theme-teknik .cssBookingBlock .cssGenericButton { margin: 15px; }
+.theme-teknik .product-list { width: 400px; }
+.theme-teknik .cssBookingDay .cssBookingDayContent,
+.theme-teknik .cssBookingDayDisabled .cssBookingDayContent { width: 80px; }
+.theme-teknik .booking-day-times .cssSquareBoxTitle { color: #fff; padding: 2px 5px; }
+.theme-teknik .booking-day-times-close { top: 5px; }
+.theme-teknik .product-list .short-description { width: 358px; }
+.theme-teknik #cssBookingProductPage .cssBoxTitle { width: 100%; padding: 5px; }
+
+
+
+.cssBookingButton {
+   font-size: 12px;
+   padding: 5px 10px;
+   color: #fff;
+   border-radius: 5px;
+   margin: 10px;
+   display: block;
+   float: left;
+   text-decoration: none;
+
+   background: #80b55a; /* Old browsers */
+   background: -moz-linear-gradient(top,  #80b55a 0%, #699e5d 45%, #398235 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80b55a), color-stop(45%,#699e5d), color-stop(100%,#398235)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  #80b55a 0%,#699e5d 45%,#398235 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  #80b55a 0%,#699e5d 45%,#398235 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  #80b55a 0%,#699e5d 45%,#398235 100%); /* IE10+ */
+   background: linear-gradient(to bottom,  #80b55a 0%,#699e5d 45%,#398235 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80b55a', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
+}
+.cssBookingButton:hover {
+   color: #fff;
+}
+
+sup,
+sub {
+   height: 0;
+   line-height: 1;
+   vertical-align: baseline;
+   _vertical-align: bottom;
+   position: relative;
+}
+sup { bottom: 0.5em; }
+sub { top: 0.4em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#booking-index ul {
+   list-style: none;
+   padding: 0px;
+   margin: 0px;
+}
+#booking-index ul li {
+   overflow: hidden;
+   margin: 20px 0px;
+}
+#booking-index ul img {
+   max-width: 120px;
+   float: left;
+   padding: 2px;
+   border: 1px solid #ccc;
+}
+#booking-index ul .info-container {
+   float: left;
+   margin-left: 10px;
+   width: 500px;
+}
+#booking-index .filter {
+   background: #f0f0f0;
+   overflow: hidden;
+   padding: 10px;
+}
+#booking-index .filter #filter-search {
+   float: right;
+   height: 70px;
+   width: 70px;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   cursor: pointer;
+   font-size: 30px;
+   background-color: #fff;
+   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+   background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+   background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+   background-image: linear-gradient(top, #fff 0%, #eee 50%);
+   color: #ccc;
+}
+#booking-index .filter #filter-search:hover {
+   background-color: #eee;
+   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fff), color-stop(0.5, #fafafa));
+   background-image: -webkit-linear-gradient(center bottom, #fff 0%, #fafafa 50%);
+   background-image: -moz-linear-gradient(center bottom, #fff 0%, #fafafa 50%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#fafafa', endColorstr = '#ffffff', GradientType = 0);
+   background-image: linear-gradient(top, #fafafa 0%, #fff 50%);
+   color: #bbb;
+}
+#booking-index .filter .top-row,
+#booking-index .filter .bottom-row {
+   width: 580px;
+   overflow: hidden;
+}
+#booking-index .filter .top-row > div {
+   float: left;
+   margin: 0px 20px 10px 0px;
+}
+#booking-index .filter .top-row > div:last-child {
+   margin-right: 0px;
+}
+#booking-index .filter .bottom-row > div {
+   float: left;
+   margin-right: 20px;
+}
+#booking-index .filter .bottom-row > div:last-child {
+   margin-right: 0px;
+}
+#booking-index .filter .bottom-row > div input[type=text],
+#booking-index .filter .bottom-row > div input[type=number] {
+   padding: 8px;
+   width: 82px;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   background-color: #fff;
+}
+
+#booking-product .booking-wrapper {
+   background: #efefef;
+   padding: 10px;
+   overflow: hidden;
+   position: relative;
+   clear: both;
+}
+#booking-product .back-to-list {
+   display: block;
+   line-height: 30px;
+   font-size: 14px;
+   margin-bottom: 20px;
+}
+#booking-product .back-to-list i {
+   float: left;
+   height: 14px;
+   width: 14px;
+   margin: 7px 5px 0px 0px;
+   background: url('../../public/img/glyphicons-halflings.png') no-repeat;
+   background-position: -240px -96px;
+}
+#booking-product #no-bookable-times {
+   width: 460px;
+   height: 130px;
+   padding-top: 130px;
+   text-align: center;
+   background: #fff;
+}
+#booking-product .calendar-wrapper {
+   float: left;
+   background: #fbfbfb;
+}
+#booking-product .calendar-header {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+   overflow: hidden;
+}
+#booking-product .calendar li,
+#booking-product .calendar-header li {
+   width: 55px;
+   margin: 0px;
+   float: left;
+   text-align: center;
+   border: 1px solid transparent;
+}
+#booking-product .calendar {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+   overflow: hidden;
+}
+#booking-product .calendar li {
+   height: 50px;
+   border-left: 1px solid #e7e7e7;
+   border-bottom: 1px solid #e7e7e7;
+}
+#booking-product .calendar li.first-row {
+   border-top: 1px solid #e7e7e7;
+}
+#booking-product .calendar li:nth-child(7n+0) {
+   border-right: 1px solid #e7e7e7;
+}
+#booking-product .calendar li:nth-child(7n+1) {
+   clear: left;
+}
+#booking-product .calendar li h3 {
+   margin: 15px 0px 0px;
+   display: none;
+}
+#booking-product .calendar li.active h3 {
+   display: block;
+   color: #c1c1c1;
+}
+#booking-product .calendar li.active h3 a {
+   text-decoration: none;
+}
+#booking-product .calendar li.with-times:hover {
+   background: #fff;
+}
+#booking-product .calendar li.with-times h3 {
+   display: block;
+   color: #424242;
+}
+#booking-product .calendar li .times {
+   display: none;
+   position: absolute;
+   top: 40px;
+   left: 40px;
+   padding: 10px;
+   width: 350px;
+   background: #fff;
+   box-shadow: 0px 0px 20px #e4e4e4;
+}
+#booking-product .calendar li .times h4 {
+   margin: 10px 0px 20px;
+}
+#booking-product .calendar li .times .close {
+   float: right;
+   background: url('../../public/img/glyphicons-halflings.png') no-repeat;
+   background-position: -168px -96px;
+   text-indent: -9999px;
+   height: 14px;
+   width: 14px;
+}
+#booking-product .calendar-header {
+   text-align: center;
+   margin-top: 10px;
+}
+#booking-product .calendar-navigation {
+   background: url('../../public/img/glyphicons-halflings.png') no-repeat;
+   display: block;
+   height: 14px;
+   width: 14px;
+   margin: 10px 10px 0px;
+}
+#booking-product .calendar-navigation.prev-month {
+   float: left;
+   background-position: -240px -96px;
+}
+#booking-product .calendar-navigation.next-month {
+   float: right;
+   background-position: -264px -96px;
+}
+#booking-product .calendar li .times .header {
+   border-top: 1px solid #a0a0a0;
+   background: #f8f8f8;
+   margin-bottom: 10px;
+   padding: 10px 20px;
+   font-size: 12px;
+   text-align: left;
+}
+#booking-product .calendar li .times ul {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+   height: 160px;
+   overflow-y: scroll;
+}
+#booking-product .calendar li .times ul li {
+   float: none;
+   width: auto;
+   height: auto;
+   text-align: left;
+   font-size: 12px;
+   border: 0px;
+}
+#booking-product .calendar li .times ul a {
+   text-decoration: none;
+   padding-left: 5px;
+}
+#booking-product .calendar li .times ul span {
+   color: #ccc;
+   padding-left: 19px;
+}
+#booking-product .calendar li .times ul a i.icon {
+   height: 14px;
+   width: 14px;
+   float: left;
+}
+#booking-product .calendar li .times ul a.selected i.icon {
+   background: url('../../public/img/glyphicons-halflings.png') no-repeat;
+   background-position: -288px 0;
+}
+#booking-product .summary-wrapper {
+   width: 245px;
+   float: left;
+   margin-left: 30px;
+   font-size: 12px;
+}
+#booking-product .summary-wrapper ul {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+}
+#booking-product .summary-wrapper ul li {
+   margin: 0px;
+   line-height: 30px;
+}
+#booking-product .summary-wrapper ul li.errors {
+   margin-top: 20px;
+   line-height: 1.2em;
+   border: 1px solid #eed3d7;
+   background: #fff;
+   padding: 10px;
+}
+#booking-product .summary-wrapper ul li.errors .error {
+   margin-bottom: 10px;
+}
+#booking-product .summary-wrapper ul li.errors .error:last-child {
+   margin-bottom: 0px;
+}
+#booking-product .summary-wrapper ul li label {
+   float: left;
+   width: 50%;
+}
+#booking-product .summary-wrapper .group {
+   overflow: hidden;
+}
+#booking-product .summary-wrapper li.button {
+   text-align: center;
+}
+#booking-product .summary-wrapper #book-action {
+   border: 0px;
+   margin-top: 20px;
+   padding: 10px 70px;
+   border-radius: 5px;
+   color: #fff;
+   font-size: 14px;
+   background-image: -ms-linear-gradient(top, #F9B04D 0%, #F39221 100%);
+   background-image: -moz-linear-gradient(top, #F9B04D 0%, #F39221 100%);
+   background-image: -o-linear-gradient(top, #F9B04D 0%, #F39221 100%);
+   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F9B04D), color-stop(1, #F39221));
+   background-image: -webkit-linear-gradient(top, #F9B04D 0%, #F39221 100%);
+   background-image: linear-gradient(to bottom, #F9B04D 0%, #F39221 100%);
+   cursor: pointer;
+}
+#booking-product .summary-wrapper #book-action:disabled {
+   cursor: not-allowed;
+}
+#booking-product .summary-wrapper #book-action i {
+   height: 14px;
+   width: 14px;
+   float: left;
+   margin: 2px 5px 0px 0px;
+   background: url('../../public/img/glyphicons-halflings-white.png') no-repeat;
+   background-position: -96px -144px;
+}
+#booking-product .summary-wrapper #book-action:disabled i {
+   background-position: -120px -144px;
+}
+#booking-product .summary-wrapper input[type=text],
+#booking-product .summary-wrapper input[type=number] {
+   width: 40px;
+   padding: 5px;
+   border: 1px solid #ccc;
+   margin-left: 5px;
+}
+#booking-product .summary-wrapper input[type=text]:disabled,
+#booking-product .summary-wrapper input[type=number]:disabled {
+   background: #fafafa;
+   cursor: not-allowed;
+}
+#booking-product .summary-wrapper .quantity-group {
+   float: right;
+}
+#booking-product .summary-wrapper .quantity-group label {
+   float: none;
+}
+#booking-product .summary-wrapper .value {
+   float: left;
+   width: 50%;
+   text-align: right;
+}
+#booking-product .product-container {
+   overflow: hidden;
+   margin-bottom: 40px;
+}
+#booking-product .product-top-wrapper ul,
+#booking-product .product-top-wrapper ul li {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+}
+#booking-product .images {
+   width: 300px;
+   float: left;
+}
+#booking-product .main-image {
+   float: left;
+   margin: 0px 20px 20px 0px;
+}
+#booking-product .main-image img {
+   max-width: 300px;
+}
+#booking-product .images .thumbs {
+   clear: both;
+}
+#booking-product .images .thumbs a {
+   display: block;
+   text-align: center;
+   float: left;
+   overflow: hidden;
+   height: 78px;
+   width: 78px;
+   border: 1px solid #eee;
+   margin: 0px 10px 10px 0px;
+}
+#booking-product .images .thumbs img {
+   max-width: 78px;
+   max-height: 78px;
+}
+#booking-product .product-wrappers {
+   overflow: hidden;
+   margin-bottom: 40px;
+}
+#booking-product .product-top-wrapper {
+   float: left;
+   width: 400px;
+}
+#booking-product .product-bottom-wrapper {
+   margin-bottom: 40px;
+}
+#booking-product #add-extras-action {
+   padding: 5px;
+}
+#booking-product #variant-info {
+   margin-bottom: 20px;
+}

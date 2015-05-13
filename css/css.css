@@ -1,0 +1,12 @@
+#page {margin:0 auto;}
+.container{margin-right: auto; margin-left: auto; padding-left:10px; padding-right:10px;}
+#topbar { background-color: transparent; border-style: solid; border-width: 5px 0 1px; border-color:#000000 transparent #e4e4e4;}
+.quick-access .quick-access-toggle { background-color: #363636; width: 35px; line-height:35px; font-size: 16px; color: #a8a8a8; border-radius: 50%;
+-webkit-transition: all 0.2s ease-in-out 0s; transition: all 0.2s ease-in-out 0s; text-align: center; margin_ 0 3px; }
+.fa{ dislay: inline-block; font-family: FontAwesome; font-style:normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased;}
+.inner-toggle{ backgound: #ffffff; min-width: 180px; position: absolute; right:0; z-index:9999 !important; opacity:0; visibility: hidden; -webkit-box-shadow: 0 1px 3px #eeeeee;
+box-shadow: 0 1px 3px #eeeeee; padding: 5px; border.top.right.radius: 0; border-top-left-radius: 0; border-bottom.right-radius: 3px; border-bottom-left-radius: 3px; border-top: 5px solid #c83a3a;}
+#title{text-indent: -9999px;}
+.special-price {color: darkred;}
+p.old-price span {text-decoration: line-through;}
+.custom-subscribe {background: #cccccc;}
